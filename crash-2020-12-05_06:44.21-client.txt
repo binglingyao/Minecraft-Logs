@@ -1,0 +1,359 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  AnotherCommonBugFix ([服务端][客户端][通用BUG修复]AnotherCommonBugFix-1.2.5-1.12.2.jar)
+  TransformLoader ([服务端][客户端][动态环绕]DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  ClsPlugin ([客户端][更快加载]CustomLoadingScreen-1.12.2-1.4.1.jar)
+  CorePlugin ([客户端][平滑字体]SmoothFont-mc1.12.2-2.1.2.jar)
+  CustomSkinLoader ([服务端][客户端][皮肤]CustomSkinLoader_Forge-14.12.jar)
+  AppleCore ([服务端][客户端][苹果核]AppleCore-mc1.12.2-3.4.0.jar)
+  TconEvoCoreMod ([服务端][客户端][匠魂拓展-进化]tconevo-1.12.2-1.0.38.jar)
+  JechCore ([服务端][客户端][JEI附属-拼音]JustEnoughCharacters-1.12.0-3.4.9.jar)
+  Inventory Tweaks Coremod ([客户端][背包整理]InventoryTweaks-1.64+dev.151.jar)
+  CreativePatchingLoader ([服务端][客户端][前置]CreativeCore_v1.10.34_mc1.12.2.jar)
+  ItemPatchingLoader ([服务端][客户端][物理掉落]ItemPhysic_Full_1.4.34_mc1.12.2.jar)
+  BetterFoliageLoader ([客户端][更好的树叶]BetterFoliage-MC1.12-2.3.1.jar)
+  CTMCorePlugin ([服务端][客户端][前置]CTM-MC1.12.2-1.0.2.31.jar)
+  EnderCorePlugin (EnderCore-1.12.2-0.5.76-core.jar)
+  MekanismCoremod ([服务端][客户端][通用机械]Mekanism-1.12.2-9.8.3.390.jar)
+  BlurPlugin ([客户端][背景模糊]Blur-1.0.4-14.jar)
+  ForgelinPlugin ([服务端][客户端][前置]Forgelin-1.8.4.jar)
+  ShoulderPlugin ([客户端][越肩视角]ShoulderSurfing-1.12.2-1.15.1.jar)
+Contact their authors BEFORE contacting forge
+
+// This doesn't make any sense!
+
+Time: 12/5/20 6:44 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Materialis (materialis)
+Caused by: slimeknights.tconstruct.library.TinkerAPIException: [TCon API] Could not register Material "tin": It was already registered by Tinkers' Evolution
+	at slimeknights.tconstruct.library.TinkerRegistry.error(TinkerRegistry.java:986)
+	at slimeknights.tconstruct.library.TinkerRegistry.addMaterial(TinkerRegistry.java:131)
+	at com.rcx.materialis.modules.ModuleGeneric.preInit(ModuleGeneric.java:56)
+	at com.rcx.materialis.proxy.CommonProxy.preInit(CommonProxy.java:48)
+	at com.rcx.materialis.proxy.ClientProxy.preInit(ClientProxy.java:38)
+	at com.rcx.materialis.Materialis.preInit(Materialis.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:629)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:252)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:467)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_271, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 182342520 bytes (173 MB) / 989855744 bytes (944 MB) up to 10737418240 bytes (10240 MB)
+	JVM Flags: 11 total; -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=16M -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmn128m -Xmx10240m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2854 Optifine OptiFine_1.12.2_HD_U_F5 173 mods loaded, 173 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                                | Version                  | Source                                                         | Signature                                |
+	|:----- |:--------------------------------- |:------------------------ |:-------------------------------------------------------------- |:---------------------------------------- |
+	| LCH   | minecraft                         | 1.12.2                   | minecraft.jar                                                  | None                                     |
+	| LCH   | mcp                               | 9.42                     | minecraft.jar                                                  | None                                     |
+	| LCH   | FML                               | 8.0.99.99                | forge-1.12.2-14.23.5.2854.jar                                  | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | forge                             | 14.23.5.2854             | forge-1.12.2-14.23.5.2854.jar                                  | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCH   | smoothfontcore                    | mc1.12.2-2.1.2           | minecraft.jar                                                  | None                                     |
+	| LCH   | jecharacters                      | 1.12.0-3.4.9             | [服务端][客户端][JEI附属-拼音]JustEnoughCharacters-1.12.0-3.4.9.jar      | None                                     |
+	| LCH   | creativecoredummy                 | 1.0.0                    | minecraft.jar                                                  | None                                     |
+	| LCH   | itemphysic                        | 1.4.0                    | minecraft.jar                                                  | None                                     |
+	| LCH   | anothercommonbugfix               | 1.2.5                    | minecraft.jar                                                  | None                                     |
+	| LCH   | smoothfont                        | mc1.12.2-2.1.2           | [客户端][平滑字体]SmoothFont-mc1.12.2-2.1.2.jar                       | None                                     |
+	| LCH   | memorybar                         | 1.0.7                    | [客户端][内存条]memorybar-1.12.2_1.0.7.jar                           | None                                     |
+	| LCH   | fw                                | 1.6.0                    | [客户端][无边框全屏]FullscreenWindowed-1.12-1.6.0.jar                  | None                                     |
+	| LCH   | itemgot                           | @VERSION@                | [客户端][显示获得了什么]itemgot-1.0.10.jar                               | None                                     |
+	| LCH   | forgelin                          | 1.8.4                    | [服务端][客户端][前置]Forgelin-1.8.4.jar                               | None                                     |
+	| LCH   | betterfoliage                     | 2.3.1                    | [客户端][更好的树叶]BetterFoliage-MC1.12-2.3.1.jar                     | None                                     |
+	| LCH   | customloadingscreen               | 1.12.2-1.4.1             | [客户端][更快加载]CustomLoadingScreen-1.12.2-1.4.1.jar                | None                                     |
+	| LCH   | i18nmod                           | 1.12.2-1.0.8             | [客户端][汉化]i18nupdatemod-1.12.2-1.0.8.jar                        | None                                     |
+	| LCH   | durabilityviewer                  | 1.6                      | [客户端][耐久显示]DurabilityViewer-1.12-forge14.21.1.2387-1.6.jar     | None                                     |
+	| LCH   | inventorytweaks                   | 1.64+dev.151.822d839     | [客户端][背包整理]InventoryTweaks-1.64+dev.151.jar                    | 55d2cd4f5f0961410bf7b91ef6c6bf00a766dcbe |
+	| LCH   | blur                              | 1.0.4-14                 | [客户端][背景模糊]Blur-1.0.4-14.jar                                   | None                                     |
+	| LCH   | neat                              | 1.4-17                   | [客户端][血条]Neat+1.4-17.jar                                       | None                                     |
+	| LCH   | shouldersurfing                   | 1.16                     | [客户端][越肩视角]ShoulderSurfing-1.12.2-1.15.1.jar                   | d6261bb645f41db84c74f98e512c2bb43f188af2 |
+	| LCH   | waila                             | 1.8.26                   | [客户端][这啥]Hwyla-1.8.26-B41_1.12.2.jar                           | None                                     |
+	| LCH   | mtlib                             | 3.0.6                    | [服务端][客户端][前置]MTLib-3.0.6.jar                                  | None                                     |
+	| LCH   | crafttweaker                      | 4.1.20                   | [服务端][客户端][合成修改]CraftTweaker2-1.12-4.1.20.602.jar              | None                                     |
+	| LCH   | modtweaker                        | 4.0.18                   | [服务端][客户端][合成修改附属-MOD]modtweaker-4.0.18.jar                    | None                                     |
+	| LCH   | jei                               | 4.16.1.302               | [服务端][客户端][JEI]jei_1.12.2-4.16.1.302.jar                       | None                                     |
+	| LCH   | ctm                               | MC1.12.2-1.0.2.31        | [服务端][客户端][前置]CTM-MC1.12.2-1.0.2.31.jar                        | None                                     |
+	| LCH   | chisel                            | MC1.12.2-1.0.2.45        | [服务端][客户端][凿子]Chisel-MC1.12.2-1.0.2.45.jar                     | None                                     |
+	| LCH   | mantle                            | 1.12-1.3.3.55            | [服务端][客户端][前置]Mantle-1.12-1.3.3.55.jar                         | None                                     |
+	| LCH   | materialispreload                 | 1.2.1                    | [服务端][客户端][匠魂拓展]materialis-1.12.2-1.2.1.jar                    | None                                     |
+	| LCH   | endercore                         | 1.12.2-0.5.76            | [服务端][客户端][末影核心]EnderCore-1.12.2-0.5.76.jar                    | None                                     |
+	| LCH   | redstoneflux                      | 2.1.1                    | [服务端][客户端][前置]RedstoneFlux-1.12-2.1.1.1-universal.jar          | None                                     |
+	| LCH   | cofhcore                          | 4.6.6                    | [服务端][客户端][前置]CoFHCore-1.12.2-4.6.6.1-universal.jar            | None                                     |
+	| LCH   | cofhworld                         | 1.4.0                    | [服务端][客户端][前置]CoFHWorld-1.12.2-1.4.0.1-universal.jar           | None                                     |
+	| LCH   | thermalfoundation                 | 2.6.7                    | [服务端][客户端][热力基本]ThermalFoundation-1.12.2-2.6.7.1-universal.jar | None                                     |
+	| LCH   | codechickenlib                    | 3.2.3.358                | [服务端][客户端][前置]CodeChickenLib-1.12.2-3.2.3.358-universal.jar    | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCH   | thermalexpansion                  | 5.5.7                    | [服务端][客户端][热力膨胀]ThermalExpansion-1.12.2-5.5.7.1-universal.jar  | None                                     |
+	| LCH   | baubles                           | 1.5.2                    | [服务端][客户端][饰品栏]Baubles-1.12-1.5.2.jar                          | None                                     |
+	| LCH   | enderio                           | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LCH   | enderiointegrationtic             | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LCH   | tconstruct                        | 1.12.2-2.13.0.183        | [服务端][客户端][匠魂]TConstruct-1.12.2-2.13.0.183.jar                 | None                                     |
+	| LCH   | wailaharvestability               | 1.1.12                   | [客户端][这啥附属]WailaHarvestability-mc1.12-1.1.12.jar               | None                                     |
+	| LCH   | wawla                             | 2.6.275                  | [客户端][这啥附属]Wawla-1.12.2-2.6.275.jar                            | d476d1b22b218a10d845928d1665d45fce301b27 |
+	| LCH   | mousetweaks                       | 2.10                     | [客户端][鼠标手势]MouseTweaks-2.10-mc1.12.2.jar                       | None                                     |
+	| LCH   | tinkersjei                        | 1.2                      | [服务端][客户端][JEI拓展-匠魂]tinkersjei-1.2.jar                         | None                                     |
+	| LCH   | appliedenergistics2               | rv6-stable-7             | [服务端][客户端][应用能源2]appliedenergistics2-rv6-stable-7.jar          | dfa4d3ac143316c6f32aa1a1beda1e34d42132e5 |
+	| LCH   | jee                               | 1.0.8                    | [服务端][客户端][JEI附属-AE]JustEnoughEnergistics-1.12.2-1.0.8.jar     | None                                     |
+	| LCH   | jetif                             | 1.5.2                    | [服务端][客户端][JEI附属-液体]jetif-1.12.2-1.5.2.jar                     | None                                     |
+	| LCH   | harvestcraft                      | 1.12.2zb                 | [服务端][客户端][潘马斯农场]Pam's+HarvestCraft+1.12.2zg.jar               | None                                     |
+	| LCH   | jehc                              | 1.7.2                    | [服务端][客户端][JEI附属-潘马斯]just-enough-harvestcraft-1.12.2-1.7.2.jar | None                                     |
+	| LCH   | monsterswarm                      | 2.0.1                    | [服务端][客户端][云集怪物]MonsterSwarm-2.0.1.jar                         | None                                     |
+	| LCH   | coroutil                          | 1.12.1-1.2.37            | [服务端][客户端][前置]coroutil-1.12.1-1.2.37.jar                       | None                                     |
+	| LCH   | zombieawareness                   | 1.12.1-1.11.16           | [服务端][客户端][僵尸意志]zombieawareness-1.12.1-1.11.16.jar             | None                                     |
+	| LCH   | ichunutil                         | 7.2.2                    | [服务端][客户端][前置]iChunUtil-1.12.2-7.2.2.jar                       | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LCH   | sync                              | 7.1.0                    | [服务端][客户端][克隆]Sync-1.12.2-7.1.0.jar                            | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LCH   | extendedrenderer                  | v1.0                     | [服务端][客户端][前置]coroutil-1.12.1-1.2.37.jar                       | None                                     |
+	| LCH   | configmod                         | v1.0                     | [服务端][客户端][前置]coroutil-1.12.1-1.2.37.jar                       | None                                     |
+	| LCH   | creativecore                      | 1.10.0                   | [服务端][客户端][前置]CreativeCore_v1.10.34_mc1.12.2.jar               | None                                     |
+	| LCH   | cucumber                          | 1.1.3                    | [服务端][客户端][前置]Cucumber-1.12.2-1.1.3.jar                        | None                                     |
+	| LCH   | extendedcrafting                  | 1.5.6                    | [服务端][客户端][前置]ExtendedCrafting-1.12.2-1.5.6.jar                | None                                     |
+	| LCH   | forgemultipartcbe                 | 2.6.2.83                 | [服务端][客户端][前置]ForgeMultipart-1.12.2-2.6.2.83-universal.jar     | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCH   | microblockcbe                     | 2.6.2.83                 | [服务端][客户端][前置]ForgeMultipart-1.12.2-2.6.2.83-universal.jar     | None                                     |
+	| LCH   | minecraftmultipartcbe             | 2.6.2.83                 | [服务端][客户端][前置]ForgeMultipart-1.12.2-2.6.2.83-universal.jar     | None                                     |
+	| LCH   | mm_lib                            | 1.5.0                    | [服务端][客户端][前置]MMLib-1.5.0.jar                                  | None                                     |
+	| LCH   | mrtjpcore                         | 2.1.4.43                 | [服务端][客户端][前置]MrTJPCore-1.12.2-2.1.4.43-universal.jar          | None                                     |
+	| LCH   | wanionlib                         | 1.12.2-2.5               | [服务端][客户端][前置]WanionLib-1.12.2-2.5.jar                         | None                                     |
+	| LCH   | orelib                            | 3.6.0.1                  | [服务端][客户端][前置]OreLib-1.12.2-3.6.0.1.jar                        | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCH   | dsurround                         | 3.6.1.0                  | [服务端][客户端][动态环绕]DynamicSurroundings-1.12.2-3.6.1.0.jar         | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCH   | tinker_io                         | rw2.8.3                  | [服务端][客户端][匠魂拓展-IO]tinker_io-1.12.2-rw2.8.3.jar                | None                                     |
+	| LCH   | tinkertoolleveling                | 1.12.2-1.1.0.DEV.b23e769 | [服务端][客户端][匠魂拓展-升级]TinkerToolLeveling-1.12.2-1.1.0.jar         | None                                     |
+	| LCH   | taiga                             | 1.12.2-1.3.3             | [服务端][客户端][匠魂拓展-合金]taiga-1.12.2-1.3.4.jar                      | None                                     |
+	| LCH   | conarm                            | 1.2.5.9                  | [服务端][客户端][匠魂拓展-护甲]conarm-1.12.2-1.2.5.9.jar                   | 2484ef4d131fdc0dca0647aa21b7b944ddb935a1 |
+	| LCH   | tinkersaddons                     | 1.0.7                    | [服务端][客户端][匠魂拓展-拓展]Tinkers'+Addons-1.12.1-1.0.7.jar            | None                                     |
+	| LCH   | armoryexpansion                   | 2.0.0-alpha              | [服务端][客户端][匠魂拓展-盔甲增加]armoryexpansion-2.0.0-alpha.jar           | None                                     |
+	| LCH   | armoryexpansion-custommaterials   | 2.0.0-alpha              | [服务端][客户端][匠魂拓展-盔甲增加]armoryexpansion-2.0.0-alpha.jar           | None                                     |
+	| LCH   | armoryexpansion-iceandfire        | 2.0.0-alpha              | [服务端][客户端][匠魂拓展-盔甲增加]armoryexpansion-2.0.0-alpha.jar           | None                                     |
+	| LCH   | armoryexpansion-matteroverdrive   | 2.0.0-alpha              | [服务端][客户端][匠魂拓展-盔甲增加]armoryexpansion-2.0.0-alpha.jar           | None                                     |
+	| LCH   | oreberries                        | 0.5.0                    | [服务端][客户端][匠魂拓展-矿梅]oreberries-1.12.x-0.5.0.jar                 | None                                     |
+	| LCH   | totaltinkers                      | 0.5.4                    | [服务端][客户端][匠魂拓展-统合]totaltinkers-0.5.4.jar                      | None                                     |
+	| LCH   | supertic                          | 2.1.0                    | [服务端][客户端][匠魂拓展-药水]SuperTic-2.1.0.jar                          | None                                     |
+	| LCH   | exnihilocreatio                   | 1.12.2-0.4.7.2           | [服务端][客户端][无中生有]exnihilocreatio-1.12.2-0.4.7.2.jar             | None                                     |
+	| LCH   | tcomplement                       | 1.12.2-0.4.3             | [服务端][客户端][匠魂拓展-补充]TinkersComplement-1.12.2-0.4.3.jar          | None                                     |
+	| LCH   | libnine                           | 1.2.0                    | libnine-1.12.2-1.2.0.jar                                       | None                                     |
+	| LCH   | tconevo                           | 1.0.38                   | [服务端][客户端][匠魂拓展-进化]tconevo-1.12.2-1.0.38.jar                   | None                                     |
+	| LCH   | aquaculture                       | 1.6.8                    | [服务端][客户端][水产养殖]Aquaculture-1.12.2-1.6.8.jar                   | None                                     |
+	| LCE   | materialis                        | 1.2.1                    | [服务端][客户端][匠魂拓展]materialis-1.12.2-1.2.1.jar                    | None                                     |
+	| LC    | ageingmobs                        | 1.1                      | [服务端][客户端][变异生物]Ageing-Mobs-1.1.jar                            | None                                     |
+	| LC    | epicsiegemod                      | 13.168                   | [服务端][客户端][史诗攻城]EpicSiegeMod-13.168.jar                        | None                                     |
+	| LC    | ctgui                             | 1.0.0                    | [服务端][客户端][合成修改]CraftTweaker2-1.12-4.1.20.602.jar              | None                                     |
+	| LC    | crafttweakerjei                   | 2.0.3                    | [服务端][客户端][合成修改]CraftTweaker2-1.12-4.1.20.602.jar              | None                                     |
+	| LC    | recipehandler                     | 0.13                     | [服务端][客户端][合成冲突]NoMoreRecipeConflict-0.13.jar                  | None                                     |
+	| LC    | backtools                         | 7.0.1                    | [服务端][客户端][后置工具]BackTools-1.12.2-7.0.1.jar                     | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LC    | journeymap                        | 1.12.2-5.7.1             | [服务端][客户端][地图]journeymap-1.12.2-5.7.1.jar                      | None                                     |
+	| LC    | gravestone                        | 1.10.3                   | [服务端][客户端][墓碑]gravestone-1.10.3.jar                            | None                                     |
+	| LC    | packagedauto                      | 1.12.2-1.0.3.13          | [服务端][客户端][封包合成]PackagedAuto-1.12.2-1.0.3.14.jar               | None                                     |
+	| LC    | packagedexcrafting                | 1.12.2-1.0.1.1           | [服务端][客户端][封包合成附属-EX]PackagedExCrafting-1.12.2-1.0.1.2.jar     | None                                     |
+	| LC    | weather2                          | 1.12.1-2.6.12            | [服务端][客户端][局部风暴]weather2-1.12.1-2.6.12.jar                     | None                                     |
+	| LC    | patchouli                         | 1.0-21                   | [服务端][客户端][帕秋莉手册]Patchouli-1.0-21.jar                          | None                                     |
+	| LC    | holoinventory                     | 2.1.1.151                | [服务端][客户端][库存显示]HoloInventory-1.12.2-2.1.1.151.jar             | None                                     |
+	| LC    | extracells                        | 2.6.5                    | [服务端][客户端][应用能源2拓展-储存]ExtraCells-1.12.2-2.6.5.jar              | None                                     |
+	| LC    | mekanism                          | 1.12.2-9.8.3.390         | [服务端][客户端][通用机械]Mekanism-1.12.2-9.8.3.390.jar                  | None                                     |
+	| LC    | omlib                             | 3.1.4-249                | [服务端][客户端][开放式炮台前置]omlib-1.12.2-3.1.4-249.jar                  | None                                     |
+	| LC    | openmodularturrets                | 3.1.12-378               | [服务端][客户端][开放式炮台]openmodularturrets-1.12.2-3.1.12-378.jar      | None                                     |
+	| LC    | mobamputation                     | 7.0.0                    | [服务端][客户端][怪物截肢]MobAmputation-1.12.2-7.0.1.jar                 | None                                     |
+	| LC    | mobdismemberment                  | 7.0.0                    | [服务端][客户端][怪物肢解]MobDismemberment-1.12.2-7.0.0.jar              | None                                     |
+	| LC    | flammpfeil.slashblade             | mc1.12-r33               | [服务端][客户端][拔刀剑]SlashBlade-mc1.12-r33.jar                       | None                                     |
+	| LC    | slashbladetic                     | V1.4.0-MC1.12.2          | [服务端][客户端][拔刀剑附属-匠魂]SlashBladeTic-V1.4.0-MC1.12.2.jar          | None                                     |
+	| LC    | kyokainokanata                    | 1.0.9                    | [服务端][客户端][拔刀剑附属-境界の彼方]kyokainokanata-1.0.9.jar                | None                                     |
+	| LC    | slashblade.mistraven              | 0.0.1                    | [服务端][客户端][拔刀剑附属-寒鸦]Mistraven-1.12.2-r1.jar.jar                | None                                     |
+	| LC    | slashblade_addon                  | 1.2.0                    | [服务端][客户端][拔刀剑附属-日本刀]SlashBladeJapaneseAddonPack_1.2.0.jar     | None                                     |
+	| LC    | examplemod                        | 1.0                      | [服务端][客户端][拔刀剑附属-日本刀]SlashBladeJapaneseAddonPack_1.2.0.jar     | None                                     |
+	| LC    | reap                              | 1.5.3                    | [服务端][客户端][收获]reap-1.5.3.jar                                   | None                                     |
+	| LC    | excompressum                      | 3.0.32                   | [服务端][客户端][无中生有拓展-锤子]ExCompressum_1.12.2-3.0.32.jar            | None                                     |
+	| LC    | extraanvils                       | @VERSION@                | [服务端][客户端][无尽拓展-EX]extraanvils-0.9.jar                         | None                                     |
+	| LC    | avaritia                          | 3.3.0                    | [服务端][客户端][无尽贪婪]Avaritia-1.12.2-3.3.0.33-universal.jar         | None                                     |
+	| LC    | avaritiaio                        | @VERSION@                | [服务端][客户端][无尽拓展-IO]avaritiaio-1.4.jar                          | None                                     |
+	| LC    | denseneutroncollectors            | @VERSION@                | [服务端][客户端][无尽拓展-致密]denseneutroncollectors-1.1.jar              | None                                     |
+	| LC    | avaritiatweaks                    | @VERSION@                | [服务端][客户端][无尽拓展]Avaritia's+Complement-1.12.2-1.4.jar           | None                                     |
+	| LC    | avaritiaddons                     | 1.12.2-1.2               | [服务端][客户端][无尽拓展]Avaritiaddons-1.12.2-1.2.jar                   | None                                     |
+	| LC    | bowinfinityfix                    | rv5.1                    | [服务端][客户端][无限弓修复]BowInfinityFix-1.12.2-rv5.1.jar               | None                                     |
+	| LC    | extrautils2                       | 1.0                      | [服务端][客户端][更多实用设备]extrautils2-1.12-1.9.9.jar                   | None                                     |
+	| LC    | blockcraftery                     | 1.12.2-1.3.1             | [服务端][客户端][木匠方块]blockcraftery-1.12.2-1.3.1.jar                 | None                                     |
+	| LC    | enderiobase                       | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderioconduits                   | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderioconduitsappliedenergistics | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderioconduitsopencomputers      | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderioconduitsrefinedstorage     | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderiointegrationforestry        | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderiointegrationticlate         | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderiomachines                   | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | enderiopowertools                 | 5.2.61                   | [服务端][客户端][末影IO]EnderIO-1.12.2-5.2.61.jar                      | None                                     |
+	| LC    | lootcapacitortooltips             | 1.3                      | [服务端][客户端][末影IO附属-电容信息]lootcapacitortooltips-1.3.jar           | None                                     |
+	| LC    | endercrop                         | 1.12.2-1.6.0             | [服务端][客户端][末影种子]endercrop-1.12.2-1.6.0.jar                     | None                                     |
+	| LC    | enderioendergy                    | 5.2.61                   | [服务端][客户端][末影管道]EnderIO-endergy-1.12.2-5.2.61.jar              | None                                     |
+	| LC    | fastleafdecay                     | v14                      | [服务端][客户端][树叶快速腐烂]FastLeafDecay-v14.jar                        | None                                     |
+	| LC    | fbp                               | 2.4.1                    | [服务端][客户端][梦幻粒子效果]FancyBlockParticles-1.12.x-2.4.1.jar         | None                                     |
+	| LC    | waterstrainer                     | 3.3.0                    | [服务端][客户端][滤水器]WaterStrainer-1.12-3.3.0.jar                    | None                                     |
+	| LC    | simplerecipes                     | 1.12.2c                  | [服务端][客户端][潘马斯农场附属]Pam's+Simple+Recipes+1.12.2c.jar            | None                                     |
+	| LC    | pamscookables                     | 1.1                      | [服务端][客户端][潘马斯农场附属]pamscookables-1.1.jar                       | None                                     |
+	| LC    | thermaltinkering                  | 1.0                      | [服务端][客户端][热力膨胀附属-匠魂]ThermalTinkering-1.12.2-2.0.1.jar         | None                                     |
+	| LC    | foxex                             | 1.0.0                    | [服务端][客户端][狐月刀改]FoxExtra[1.12.2]v1.0.jar                       | None                                     |
+	| LC    | playerrevive                      | 1.0                      | [服务端][客户端][玩家救援]PlayerRevive_v1.2.37_mc1.12.2.jar              | None                                     |
+	| LC    | applecore                         | 3.4.0                    | [服务端][客户端][苹果核]AppleCore-mc1.12.2-3.4.0.jar                    | None                                     |
+	| LC    | spiceoflife                       | 1.3.12                   | [服务端][客户端][生活调味料]SpiceOfLife-mc1.12-1.3.12.jar                 | None                                     |
+	| LC    | customskinloader                  | 14.12                    | [服务端][客户端][皮肤]CustomSkinLoader_Forge-14.12.jar                 | 52885f395e68f42e9b3b629ba56ecf606f7d4269 |
+	| LC    | bonsaitrees                       | 1.1.4                    | [服务端][客户端][盆栽]bonsaitrees-1.1.4-b170.jar                       | None                                     |
+	| LC    | realistictorches                  | 2.1.1                    | [服务端][客户端][真实火把]RealisticTorches-1.12.2-2.1.1.jar              | None                                     |
+	| LC    | rfp2                              | 1.12.2-1.3.2             | [服务端][客户端][真实第一人称]RealFirstPerson2-1.12.2-1.3.2.jar            | None                                     |
+	| LC    | treechopper                       | 1.2.4                    | [服务端][客户端][砍树]TreeChopper-1.12.2-1.2.4.jar                     | None                                     |
+	| LC    | stg                               | 1.12.2-1.2.3             | [服务端][客户端][穿草攻击]stg-1.12.2-1.2.3.jar                           | None                                     |
+	| LC    | projectred-core                   | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-Base.jar           | None                                     |
+	| LC    | projectred-compat                 | 1.0                      | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-compat.jar         | None                                     |
+	| LC    | projectred-integration            | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-integration.jar    | None                                     |
+	| LC    | projectred-transmission           | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-integration.jar    | None                                     |
+	| LC    | projectred-fabrication            | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-fabrication.jar    | None                                     |
+	| LC    | projectred-illumination           | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-lighting.jar       | None                                     |
+	| LC    | projectred-expansion              | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-mechanical.jar     | None                                     |
+	| LC    | projectred-relocation             | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-mechanical.jar     | None                                     |
+	| LC    | projectred-transportation         | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-mechanical.jar     | None                                     |
+	| LC    | projectred-exploration            | 4.9.4.120                | [服务端][客户端][红石计划]ProjectRed-1.12.2-4.9.4.120-world.jar          | None                                     |
+	| LC    | travelersbackpack                 | 1.0.34                   | [服务端][客户端][背包]TravelersBackpack-1.12.2-1.0.34.jar              | None                                     |
+	| LC    | energyconverters                  | 1.3.7.30                 | [服务端][客户端][能量转换]energyconverters_1.12.2-1.3.7.30.jar           | None                                     |
+	| LC    | appleskin                         | 1.0.14                   | [服务端][客户端][苹果皮]AppleSkin-mc1.12-1.0.14.jar                     | None                                     |
+	| LC    | enhancedvisuals                   | 1.3.0                    | [服务端][客户端][视觉特效]EnhancedVisuals_v1.3.20_mc1.12.2.jar           | None                                     |
+	| LC    | treegrowingsimulator              | 0.0.4                    | [服务端][客户端][跳舞树生长]TreeGrowingSimulator2017-1.0.1.jar            | None                                     |
+	| LC    | mekanismtools                     | 1.12.2-9.8.3.390         | [服务端][客户端][通用机械拓展-工具]MekanismTools-1.12.2-9.8.3.390.jar        | None                                     |
+	| LC    | mekanismgenerators                | 1.12.2-9.8.3.390         | [服务端][客户端][通用机械拓展-矿石]MekanismGenerators-1.12.2-9.8.3.390.jar   | None                                     |
+	| LC    | dshuds                            | 3.6.0.0                  | [服务端][客户端][动态环绕附属]DynamicSurroundingsHuds-1.12.2-3.6.0.0.jar   | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LC    | mysticallib                       | 1.12.2-1.9.0             | [服务端][客户端][前置]mysticallib-1.12.2-1.9.0.jar                     | None                                     |
+	| LC    | armoryexpansion-conarm            | 2.0.0-alpha              | [服务端][客户端][匠魂拓展-盔甲增加]armoryexpansion-2.0.0-alpha.jar           | None                                     |
+	| LC    | unidict                           | 1.12.2-2.9.7             | [服务端][客户端][矿词统一]UniDict-1.12.2-2.9.7.jar                       | None                                     |
+	| LC    | hungeroverhaul                    | 1.12.2-1.3.3.jenkins148  | [服务端][客户端][饥饿改革]HungerOverhaul-1.12.2-1.3.3.jenkins148.jar     | None                                     |
+
+	Loaded coremods (and transformers): 
+AnotherCommonBugFix ([服务端][客户端][通用BUG修复]AnotherCommonBugFix-1.2.5-1.12.2.jar)
+  com.anotherera.core.ACBFClassTransformer
+TransformLoader ([服务端][客户端][动态环绕]DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  
+ClsPlugin ([客户端][更快加载]CustomLoadingScreen-1.12.2-1.4.1.jar)
+  alexiil.mc.mod.load.coremod.ClsTransformer
+CorePlugin ([客户端][平滑字体]SmoothFont-mc1.12.2-2.1.2.jar)
+  bre.smoothfont.asm.Transformer
+CustomSkinLoader ([服务端][客户端][皮肤]CustomSkinLoader_Forge-14.12.jar)
+  customskinloader.forge.loader.LaunchWrapper
+AppleCore ([服务端][客户端][苹果核]AppleCore-mc1.12.2-3.4.0.jar)
+  squeek.applecore.asm.TransformerModuleHandler
+TconEvoCoreMod ([服务端][客户端][匠魂拓展-进化]tconevo-1.12.2-1.0.38.jar)
+  xyz.phanta.tconevo.coremod.TconEvoClassTransformer
+JechCore ([服务端][客户端][JEI附属-拼音]JustEnoughCharacters-1.12.0-3.4.9.jar)
+  me.towdium.jecharacters.core.JechClassTransformer
+Inventory Tweaks Coremod ([客户端][背包整理]InventoryTweaks-1.64+dev.151.jar)
+  invtweaks.forge.asm.ContainerTransformer
+CreativePatchingLoader ([服务端][客户端][前置]CreativeCore_v1.10.34_mc1.12.2.jar)
+  
+ItemPatchingLoader ([服务端][客户端][物理掉落]ItemPhysic_Full_1.4.34_mc1.12.2.jar)
+  com.creativemd.itemphysic.ItemTransformer
+BetterFoliageLoader ([客户端][更好的树叶]BetterFoliage-MC1.12-2.3.1.jar)
+  mods.betterfoliage.loader.BetterFoliageTransformer
+CTMCorePlugin ([服务端][客户端][前置]CTM-MC1.12.2-1.0.2.31.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+EnderCorePlugin (EnderCore-1.12.2-0.5.76-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+MekanismCoremod ([服务端][客户端][通用机械]Mekanism-1.12.2-9.8.3.390.jar)
+  mekanism.coremod.KeybindingMigrationHelper
+BlurPlugin ([客户端][背景模糊]Blur-1.0.4-14.jar)
+  com.tterrag.blur.BlurTransformer
+ForgelinPlugin ([服务端][客户端][前置]Forgelin-1.8.4.jar)
+  
+ShoulderPlugin ([客户端][越肩视角]ShoulderSurfing-1.12.2-1.15.1.jar)
+  com.teamderpy.shouldersurfing.asm.ShoulderTransformations
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 457.51' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+	Ender IO: Found the following problem(s) with your installation (That does NOT mean that Ender IO caused the crash or was involved in it in any way. We add this information to help finding common problems, not as an invitation to post any crash you encounter to Ender IO's issue tracker. Always check the stack trace above to see which mod is most likely failing.):
+                  * Optifine is installed. This is NOT supported.
+                 This may (look up the meaning of 'may' in the dictionary if you're not sure what it means) have caused the error. Try reproducing the crash WITHOUT this/these mod(s) before reporting it.
+	Authlib is : /E:/Minecraft/O3%e8%b0%83%e8%af%95/.minecraft/libraries/com/mojang/authlib/1.5.25/authlib-1.5.25.jar
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!You are looking at the diagnostics information, not at the crash.       !!!
+	!!!Scroll up until you see the line with '---- Minecraft Crash Report ----'!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselIntegration (Enabled/Not Forced)
+		- wailaIntegration (Enabled/Not Forced)
+
+	AE2 Version: stable rv6-stable-7 for Forge 14.23.5.2768
+	Pulsar/tcomplement loaded Pulses: 
+		- ModuleCommons (Enabled/Forced)
+		- ModuleMelter (Enabled/Not Forced)
+		- ModuleArmor (Enabled/Not Forced)
+		- ModuleSteelworks (Enabled/Not Forced)
+		- ChiselPlugin (Enabled/Not Forced)
+		- ExNihiloPlugin (Enabled/Not Forced)
+		- ToolLevelingPlugin (Enabled/Not Forced)
+		- Oredict (Enabled/Forced)
+
+	OptiFine Version: OptiFine_1.12.2_HD_U_F5
+	OptiFine Build: 20191204-141934
+	Render Distance Chunks: 12
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 457.51
+	OpenGlRenderer: GeForce RTX 2060/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
